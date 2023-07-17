@@ -8,13 +8,24 @@ window.onload = () => {
 };
 
 function staticLoadPlaces() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+            var latitude = position.coords.latitude;
+            var longitude = position.coords.longitude;
+            console.log("Latitude: " + latitude + " Longitude: " + longitude);
+        });
+    } else {
+        console.log("Geolocation is not supported by this browser.");
+    
+    }
+    alert("lat:"+latitude+"lng："+longitude)
     return [
         {
             name: 'Pokèmon',
             location: {
                 // decomment the following and add coordinates:
-                lat: 34.82035,
-                lng: 113.55050
+                lat: latitude,
+                lng: longitude
             },
         },
     ];
