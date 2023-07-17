@@ -18,14 +18,14 @@ function staticLoadPlaces() {
         console.log("Geolocation is not supported by this browser.");
     
     }
-    alert("lat:"+latitude+"lng："+longitude)
+
     return [
         {
             name: 'Pokèmon',
             location: {
                 // decomment the following and add coordinates:
-                lat: latitude,
-                lng: longitude
+                lat: 34.164686610708586,
+                lng: 108.96711641421196
             },
         },
     ];
